@@ -1,22 +1,23 @@
 ---
-
+custom_generate_menus: true
+custom_templates_dir: "/ansible/custom"
 # overrides defaults in netbootxyz role
-generate_menus: true
+generate_menus: false
 generate_disks: true
 generate_checksums: true
 generate_local_vars: true
 make_num_jobs: 1
 
 # set desired site name
-# site_name: mysitename.com
+site_name: ram9.cc
 
 # set desired boot domain
-# boot_domain: boot.mysitename.com
+boot_domain: farmkun.ram9.cc
 
 # set boot version
 # boot_version: "2.x"
 
-# bootloader_tftp_enabled: false
+bootloader_tftp_enabled: false
 # bootloader_https_enabled: true
 # bootloader_http_enabled: true
 
@@ -41,9 +42,10 @@ make_num_jobs: 1
 # win_base_url:
 # rhel_base_url:
 
-early_menu_enabled: false
+early_menu_enabled: true
 early_menu_contents: |
    ### early menu overrides
    ### used to set early ipxe options such as custom console & logo
-   # console --x 1024 --y 768
-   # console --picture https://boot.netboot.xyz/logo.png
+   console --x 1280 --y 720
+   console --picture https://raw.githubusercontent.com/RAM9/farmkun/refs/heads/main/picture.jpg
+
